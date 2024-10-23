@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-base-css": {
+      "type": "section-base-css"
+    }
+  },
+  "order": [
+    "section-base-css"
+  ]
+}

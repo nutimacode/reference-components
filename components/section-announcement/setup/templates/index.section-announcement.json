@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-announcement": {
+      "type": "section-announcement"
+    }
+  },
+  "order": [
+    "section-announcement"
+  ]
+}

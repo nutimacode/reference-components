@@ -1,5 +1,6 @@
 html {
   touch-action: manipulation;
+  font-size:10px;
 }
 
 html[dir='rtl'] {
@@ -15,4 +16,8 @@ body {
 
 [hidden] {
   display: none;
+}
+
+.shopify-section{
+  width: 100%;
 }

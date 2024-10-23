@@ -1,8 +1,0 @@
-{
-  "sections": {
-    "variant_dropdown": {
-      "type": "variant-dropdown"
-    }
-  },
-  "order": ["variant_dropdown"]
-}

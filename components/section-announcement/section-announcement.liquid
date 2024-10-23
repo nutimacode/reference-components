@@ -1,0 +1,28 @@
+{% comment %}
+  section-announcement component
+
+  Accepts:
+  - text {string} - Announcement text
+  - text_alignment {'text-left'|'text-center'|'text-right'} - Text alignment
+  - text_size {'h1'|'h2'|'h3'} - Text size
+  - color_scheme {'scheme-1'|'scheme-2'|'scheme-3'} - Color scheme
+
+  Usage:
+  {%- render 'section-announcement', text: "Lorem ipsum sit dolor" -%}
+{% endcomment %}
+
+{%- liquid
+  assign text = text | default: section.settings.text | default: "Lorem ipsum sit dolor"
+  assign text_alignment = text_alignment | default: section.settings.text_alignment | default: "center"
+  assign text_size = text_size | default: section.settings.text_size | default: "h10"
+  assign color_scheme = color_scheme | default: section.settings.color_scheme | default: "scheme-2"
+-%}
+
+<div 
+  class="announcement"
+  data-color-scheme="{{ color_scheme }}"
+  data-text="{{ text_alignment }}"
+  data-page-width
+>
+  <span class="{{ text_size }}">{{ text }}</span>
+</div>

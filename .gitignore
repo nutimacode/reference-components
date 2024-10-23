@@ -10,3 +10,4 @@ test-results
 
 #IntelliJ IDE
 .idea
+.history

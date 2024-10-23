@@ -1,8 +1,0 @@
-{
-  "sections": {
-    "cart_status-notifier": {
-      "type": "cart-status-notifier"
-    }
-  },
-  "order": ["cart_status-notifier"]
-}
