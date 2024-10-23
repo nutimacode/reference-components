@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "section-slideshow": {
+      "type": "section-slideshow",
+      "settings": {
+        "text": "Slideshowww"
+      }
+    }
+  },
+  "order": [
+    "section-slideshow"
+  ]
+}
