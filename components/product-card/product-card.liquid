@@ -1,0 +1,53 @@
+{% comment %}
+  product-card component
+
+  Accepts:
+  - product {string} - Product
+
+  Usage:
+  {%- render 'product-card', product: product -%}
+{% endcomment %}
+
+{% if with_slide_tag %}
+<swiper-slide>
+{% endif %}
+
+  <div class="product-card">
+    <a href="{{ product.url }}" class="product-card__url"></a>
+    <div class="product-card__media">
+      <div class="product-card__badges">
+        <span class="product-card__badge product-card__badge--new">Yeni</span>
+        <span class="product-card__badge product-card__badge--sale">İndirim</span>
+      </div>
+      <div class="product-card__favorite">
+        <button class="product-card__favorite-button" aria-label="Favorilere ekle">
+          {% render 'icon' name: 'heart' %}
+        </button>
+      </div>
+      <div class="product-card__feature-icon">
+        {% render 'icon' name: "product" %}
+      </div>
+      <div class="product-card__variant-block">
+        <span class="product-card__variant-count">+3 Renk</span>
+        <span class="product-card__variant-icon">
+          {% render 'icon' name: "bag-plus", hydration: "on:idle" %}
+        </span>
+      </div>
+      {% render 'block-image' image: product.featured_image %}
+    </div>
+    <div class="product-card__info">
+      <span class="product-card__vendor">{{ product.vendor }}</span>
+      <h3 class="product-card__title">{{ product.title }}</h3>
+      <span class="product-card__price">
+        <span class="product-card__price-original">{{ product.price | money }}</span>
+        <span class="product-card__price-compare">{{ product.compare_at_price | money }}</span>
+      </span>
+      <span class="product-card__message">
+        Sepette Ek 400 TL İndirim asdasdasd Sepette Ek 400 TL İndirim asdasdasd Sepette Ek 400 TL İndirim
+      </span>
+    </div>
+  </div>
+
+{% if with_slide_tag %}
+</swiper-slide>
+{% endif %}

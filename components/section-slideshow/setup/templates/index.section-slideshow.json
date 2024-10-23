@@ -3,8 +3,29 @@
     "section-slideshow": {
       "type": "section-slideshow",
       "settings": {
-        "text": "Slideshowww"
-      }
+        "layout": "page-width"
+      },
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "media_crop": "16-9"
+          }
+        },
+        "slide-2": {
+          "type": "slide",
+          "settings": {
+            "media_crop": "16-9"
+          }
+        },
+        "slide-3": {
+          "type": "slide",
+          "settings": {
+            "media_crop": "16-9"
+          }
+        }
+      },
+      "block_order": ["slide-1", "slide-2", "slide-3"]
     }
   },
   "order": [

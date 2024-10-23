@@ -1,0 +1,19 @@
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-black);
+}
+
+[data-divider-spacing='small'] {
+  margin: var(--spacing-6) 0;
+}
+[data-divider-spacing='medium'] {
+  margin: var(--spacing-11) 0;
+}
+[data-divider-spacing='large'] {
+  margin: var(--spacing-16) 0;
+}

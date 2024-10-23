@@ -9,8 +9,8 @@
   :root {
 
     /* Layout */
-    --page-width: 1500px;
-    --page-width-padding: var(--size-10);
+    --page-width: 1440px;
+    --page-width-padding: var(--spacing-6);
 
     /* Typography */
     --heading-font-family: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
@@ -42,6 +42,26 @@
     --radius-2xl: 2rem;
     --radius-rounded: 9999px;
     --radius-none: 0;
+
+    /* Size */
+    
+    --size-0: 0rem;    /* 0px */
+    --size-1: 1rem;    /* 10px */
+    --size-2: 2rem;    /* 20px */
+    --size-3: 4rem;    /* 40px */
+    --size-4: 6rem;    /* 60px */
+    --size-5: 8rem;    /* 80px */
+    --size-6: 10rem;   /* 100px */
+    --size-7: 12rem;   /* 120px */
+    --size-8: 14rem;   /* 140px */
+    --size-9: 16rem;   /* 160px */
+    --size-10: 20rem;  /* 200px */
+    --size-11: 24rem;  /* 240px */
+    --size-12: 28rem;  /* 280px */
+    --size-13: 32rem;  /* 320px */
+    --size-14: 36rem;  /* 360px */
+    --size-15: 40rem;  /* 400px */
+    --size-16: 50rem;  /* 500px */
 
     /* Spacing */
 
@@ -75,17 +95,26 @@
     /* Colors */
     --color-black: #000000;
     --color-white: #ffffff;
-    --color-gray-1: #808080; 
-    --color-gray-2: #eeeeee;
-    --color-gray-3: #A5A5A5;
+    --color-grey-1: #808080; 
+    --color-grey-2: #eeeeee;
+    --color-grey-3: #A5A5A5;
     --color-green-1: #35B529;
     --color-orange-1: #FF7F22;
     --color-red-1: #FF3535;
+
+    /* Font weights */
+
+    --font-weight-light: 350;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-heavy: 800;
+    --font-weight-black: 900;
   }
 
   @media screen and (max-width: 768px) {
     :root {
-      --page-width-padding: var(--size-5);
+      --page-width-padding: var(--spacing-5);
     }
   }
 {%- endstyle -%}

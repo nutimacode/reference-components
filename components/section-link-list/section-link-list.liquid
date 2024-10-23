@@ -1,0 +1,13 @@
+{% comment %}
+  section-link-list component
+
+  Accepts:
+  - slot {string} - Links to display
+
+  Usage:
+  {%- render 'section-link-list', slot: links -%}
+{% endcomment %}
+
+<div class="link-list" id="{{ section.id }}">
+  {{ slot }}
+</div>

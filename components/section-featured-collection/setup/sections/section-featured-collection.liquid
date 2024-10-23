@@ -1,0 +1,28 @@
+{%- liquid
+  assign collection_products = collections[section.settings.collection].products | default: collections.all.products
+  capture products
+    for product in collection_products
+      render 'product-card', product: product, with_slide_tag: true
+    endfor
+  endcapture
+  
+  render 'section-featured-collection' slot: products
+-%}
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection"
+    }
+  ]
+}
+{% endschema %}

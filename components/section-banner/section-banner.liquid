@@ -1,0 +1,26 @@
+{% comment %}
+  section-banner component
+
+  Accepts:
+  - section {string} - Section 
+
+  Usage:
+  {%- render 'section-banner', section: section -%}
+{% endcomment %}
+
+{%- liquid
+  assign image = image | default: section.settings.image | default: null
+  assign image_crop = image_crop | default: section.settings.image_crop | default: "original"
+  assign layout = layout | default: section.settings.layout | default: "full-width"
+  assign link = link | default: section.settings.link | default: null
+-%}
+
+<div class="banner" data-layout="{{ layout }}">
+  {% if link %}
+    <a href="{{ link }}" class="banner__link">
+  {% endif %}
+    {% render 'block-image' image: image, image_crop: image_crop %}
+  {% if link %}
+  </a>
+  {% endif %}
+</div>

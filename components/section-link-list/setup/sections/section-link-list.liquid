@@ -1,0 +1,39 @@
+{%- liquid
+  capture links
+    for block in section.blocks
+      render 'linklist-link', block: block
+    endfor
+  endcapture
+
+  render 'section-link-list' slot: links
+-%}
+
+{% schema %}
+{
+  "name": "Link list",
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Link text",
+          "default": "Collection"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Link list"
+    }
+  ]
+}
+{% endschema %}

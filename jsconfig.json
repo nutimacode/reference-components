@@ -9,5 +9,5 @@
       "@archetype-themes/vendors/*": ["scripts/vendors/*"]
     }
   },
-  "include": ["scripts", "components"]
+  "include": ["scripts", "components", "scripts/custom-elements/swiper-element-bundle.min.js"]
 }

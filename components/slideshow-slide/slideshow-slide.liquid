@@ -1,0 +1,14 @@
+{% comment %}
+  slideshow-slide component
+
+  Accepts:
+  - block {string} - Slideshow block
+
+  Usage:
+  {%- render 'slideshow-slide' -%}
+{% endcomment %}
+
+<swiper-slide>
+  {% render 'block-image' image: block.settings.image, media_crop: block.settings.media_crop %}
+</swiper-slide>
+

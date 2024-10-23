@@ -1,6 +1,6 @@
 html {
   touch-action: manipulation;
-  font-size:10px;
+  font-size: 10px;
 }
 
 html[dir='rtl'] {
@@ -9,15 +9,16 @@ html[dir='rtl'] {
 
 html,
 body {
-  background-color: rgb(243 243 243);
+  /* background-color: rgb(243 243 243);
   color: rgb(18 18 18);
-  line-height: 1.4;
+  line-height: 1.4; */
+  background: white;
 }
 
 [hidden] {
   display: none;
 }
 
-.shopify-section{
+.shopify-section {
   width: 100%;
 }

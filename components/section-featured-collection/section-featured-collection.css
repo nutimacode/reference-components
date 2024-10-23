@@ -1,0 +1,25 @@
+.featured-collection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.featured-collection__swiper {
+  position: relative;
+}
+
+.featured-collection__swiper .swiper-prev {
+  left: calc(var(--spacing-7) * -1);
+
+  svg {
+    height: 30px;
+  }
+}
+
+.featured-collection__swiper .swiper-next {
+  right: calc(var(--spacing-7) * -1);
+
+  svg {
+    height: 30px;
+  }
+}

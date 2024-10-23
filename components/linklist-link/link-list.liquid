@@ -1,0 +1,16 @@
+{% comment %}
+  linklist-link component
+
+  Accepts:
+  - block {string} - Block
+
+  Usage:
+  {%- render 'linklist-link', block: block -%}
+{% endcomment %}
+
+{%- liquid
+  assign link = section.settings.link | default: collections[section.settings.collection].url | default: "#"
+  assign link_text = section.settings.link_text | default: "ERKEK"
+-%}
+
+<a href="{{ link }}" class="linklist-link">{{ link_text }}</a>

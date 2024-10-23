@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-divider": {
+      "type": "section-divider"
+    }
+  },
+  "order": [
+    "section-divider"
+  ]
+}
