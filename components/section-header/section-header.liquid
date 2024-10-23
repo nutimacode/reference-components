@@ -18,39 +18,55 @@
   assign main_menu = linklists[menu_link_list]
 -%}
 
-<div data-color-scheme="{{ color_scheme }}">
-  <div class="page-width">
-    <header class="main-header main-header--{{ menu_position | replace: '_', '-' }}">
-      {%- if request.page_type == 'index' -%}
-        <h1 class="main-header__logo">
-          <a href="{{ routes.root_url }}">
-            {{ shop.name }}
-          </a>
-        </h1>
-      {%- else -%}
-        <a href="{{ routes.root_url }}" class="main-header__logo">
-          {{ shop.name }}
-        </a>
-      {%- endif -%}
-
-      <div class="main-header__menu">
-        {%- for link in main_menu.links -%}
-          <a
-            href="{{ link.url }}"
-            class="main-header__menu-link {% if link.active %}main-header__menu-link--active{% endif %}"
-          >
-            {{ link.title }}
-          </a>
-        {%- endfor -%}
-      </div>
-
-      <div class="main-header__icons">
-        {%- if slot_icons != blank -%}
-          {{ slot_icons }}
-        {%- else -%}
-          {%- render 'cart-icon' -%}
-        {%- endif -%}
-      </div>
-    </header>
+<header class="header" data-color-scheme="{{ color_scheme }}"   data-page-width>
+  <div class="header__logo">
+    <a href="{{ routes.root_url }}">
+      {% render 'icon', name: 'mainLogo' %}
+    </a>
   </div>
-</div>
+
+  <div class="header__icons">
+    <div class="header__search">
+      <button class="search-button">
+        {%- render 'icon' name:'search' -%}
+      </button>
+      <input type="text" placeholder="Ürün Ara (T-shirt, Sneaker...)" class="search-input">
+    </div>
+    <div class="icon">
+      {%- render 'icon' name:'fav' -%}
+    </div>
+    <div class="icon">
+      {%- render 'icon' name:'account' -%}
+    </div>
+    <div class="icon">
+      {%- render 'icon' name:'basket' -%}
+    </div>
+  </div>
+</header>
+
+<section class="horizontal-menu" data-page-width>
+  <div class="menu-wrapper">
+    <ul class="menu">
+      {% for link in main_menu.links %}
+        <li class="menu-item">
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% render 'icon', name: 'hamburger' %}
+  </div>
+  <div class="header__search_mobile">
+    <button class="search-button-mobile">
+      {%- render 'icon' name:'search' -%}
+    </button>
+    <input type="text" placeholder="Ürün Ara (T-shirt, Sneaker...)" class="search-input-mobil">
+  </div>
+  <div class="menu-left">
+    <a href="{{ routes.root_url }}">
+    <span class="shopi-go">
+      shopi go
+    </span>
+      {% render 'icon', name:'leftLogo' %}
+    </a>
+  </div>
+</section>
