@@ -23,6 +23,15 @@
   gap: var(--size-6);
 }
 
+.container {
+  padding: 0 var(--spacing-6);
+}
+
+.content-wrapper,
+[data-padding='true'] {
+  padding: 0 var(--spacing-6);
+}
+
 @media (--small) {
   .page-width--flush-small {
     padding: 0;

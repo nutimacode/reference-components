@@ -8,6 +8,6 @@
   {%- render 'section-link-list', slot: links -%}
 {% endcomment %}
 
-<div class="link-list" id="{{ section.id }}">
+<div class="link-list content-wrapper" id="{{ section.id }}" data-layout="{{ section.settings.layout }}">
   {{ slot }}
 </div>

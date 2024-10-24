@@ -9,8 +9,8 @@
 {% endcomment %}
 
 {%- liquid
-  assign link = section.settings.link | default: collections[section.settings.collection].url | default: "#"
-  assign link_text = section.settings.link_text | default: "ERKEK"
+  assign link = link | default: block.settings.link | default: collections[section.settings.collection].url | default: "#"
+  assign link_text = link_text | default: block.settings.text | default: "ERKEK"
 -%}
 
 <a href="{{ link }}" class="linklist-link">{{ link_text }}</a>

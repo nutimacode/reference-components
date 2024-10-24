@@ -16,7 +16,7 @@
   assign link_text = link_text | default: section.settings.link_text | default: null
 -%}
 
-<div class="section-title">
+<div class="section-title content-wrapper">
   <h2>{{ title }}</h2>
   {% if link_text and link %}
     <div class="section-title__actions">

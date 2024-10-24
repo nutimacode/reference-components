@@ -3,27 +3,32 @@
     "section-slideshow": {
       "type": "section-slideshow",
       "settings": {
-        "layout": "page-width",
-        "title": "shopi go",
+        "layout": "full-width",
         "color_scheme": "scheme-2",
+        "header_image": "shopify://shop_images/vector.svg",
+        "content": "<p>Teşvikiye Mah, Ahmet Fetgari Sok. No:62 Şişli / İstanbul</p>",
+        "enable_padding": true
       },
       "blocks": {
         "slide-1": {
           "type": "slide",
           "settings": {
-            "media_crop": "16-9"
+            "media_crop": "original",
+            "image": "shopify://shop_images/Rectangle_53_d0304145-f1a3-46f2-9a12-5af262c195c4.png"
           }
         },
         "slide-2": {
           "type": "slide",
           "settings": {
-            "media_crop": "16-9"
+            "media_crop": "original",
+            "image": "shopify://shop_images/Rectangle_53_d0304145-f1a3-46f2-9a12-5af262c195c4.png"
           }
         },
         "slide-3": {
           "type": "slide",
           "settings": {
-            "media_crop": "16-9"
+            "media_crop": "original",
+            "image": "shopify://shop_images/Rectangle_53_d0304145-f1a3-46f2-9a12-5af262c195c4.png"
           }
         }
       },

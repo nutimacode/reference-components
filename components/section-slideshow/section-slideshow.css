@@ -47,6 +47,18 @@
 .slideshow__header {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: var(--spacing-6);
   gap: var(--spacing-6);
+
+  .slideshow__header-image,
+  img {
+    max-width: var(--size-7);
+    max-height: var(--size-4);
+  }
+}
+
+.slideshow__content {
+  font-size: var(--text-h7);
+  font-weight: var(--font-weight-light);
 }

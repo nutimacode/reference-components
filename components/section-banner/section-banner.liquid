@@ -10,7 +10,7 @@
 
 {%- liquid
   assign image = image | default: section.settings.image | default: null
-  assign image_crop = image_crop | default: section.settings.image_crop | default: "original"
+  assign media_crop = media_crop | default: section.settings.media_crop | default: "original"
   assign layout = layout | default: section.settings.layout | default: "full-width"
   assign link = link | default: section.settings.link | default: null
 -%}
@@ -19,7 +19,7 @@
   {% if link %}
     <a href="{{ link }}" class="banner__link">
   {% endif %}
-    {% render 'block-image' image: image, image_crop: image_crop %}
+    {% render 'block-image' image: image, media_crop: media_crop %}
   {% if link %}
   </a>
   {% endif %}

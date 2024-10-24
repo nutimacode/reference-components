@@ -1,7 +1,10 @@
 {
   "sections": {
     "section-divider": {
-      "type": "section-divider"
+      "type": "section-divider",
+      "settings": {
+        "layout": "full-width"
+      }
     }
   },
   "order": [

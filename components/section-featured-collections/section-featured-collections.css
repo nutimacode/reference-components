@@ -5,21 +5,22 @@
 
   .featured-collections__swiper {
     position: relative;
+    overflow: hidden;
   }
 
   .featured-collections__swiper .swiper-prev {
-    left: 0;
+    left: -0.1rem;
 
     svg {
-      height: 30px;
+      height: 15px;
     }
   }
 
   .featured-collections__swiper .swiper-next {
-    right: 0;
+    right: -0.1rem;
 
     svg {
-      height: 30px;
+      height: 15px;
     }
   }
 }

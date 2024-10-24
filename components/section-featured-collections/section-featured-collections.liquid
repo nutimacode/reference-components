@@ -9,7 +9,7 @@
 {% endcomment %}
 
 
-<div class="featured-collections" id="{{ section.id }}">
+<div class="featured-collections" id="{{ section.id }}" data-layout="{{ section.settings.layout }}">
   <div class="featured-collections__title">
     {% render 'section-title' title: section.settings.title, link: section.settings.link, link_text: section.settings.link_text %}
   </div>
