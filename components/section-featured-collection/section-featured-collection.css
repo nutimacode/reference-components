@@ -15,21 +15,22 @@
 
   .featured-collection__swiper {
     position: relative;
+    overflow: hidden;
   }
 
   .featured-collection__swiper .swiper-prev {
-    left: calc(var(--spacing-7) * -1);
+    left: -0.1rem;
 
     svg {
-      height: 30px;
+      height: 15px;
     }
   }
 
   .featured-collection__swiper .swiper-next {
-    right: calc(var(--spacing-7) * -1);
+    right: -0.1rem;
 
     svg {
-      height: 30px;
+      height: 15px;
     }
   }
 }

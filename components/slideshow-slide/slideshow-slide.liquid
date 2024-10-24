@@ -8,7 +8,13 @@
   {%- render 'slideshow-slide' -%}
 {% endcomment %}
 
+{% liquid 
+  if section.index0 < 2
+    assign preload = true
+  endif
+%}
+
 <swiper-slide>
-  {% render 'block-image' image: block.settings.image, media_crop: block.settings.media_crop %}
+  {% render 'block-image' image: block.settings.image, media_crop: block.settings.media_crop, preload: preload %}
 </swiper-slide>
 

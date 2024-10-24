@@ -3,7 +3,8 @@
     "section-banner": {
       "type": "section-banner",
       "settings": {
-        "layout": "full-width"
+        "layout": "full-width",
+        "media_crop": "4-1"
       }
     }
   },

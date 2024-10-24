@@ -2,32 +2,35 @@
   "sections": {
     "section-link-list": {
       "type": "section-link-list",
+      "settings": {
+        "layout": "full-width"
+      },
       "blocks": {
         "link-1": {
           "type": "link",
           "settings": {
-            "text": "Link 1",
+            "text": "Erkek",
             "url": "#"
           }
         },
         "link-2": {
           "type": "link",
           "settings": {
-            "text": "Link 1",
+            "text": "Kadın",
             "url": "#"
           }
         },
         "link-3": {
           "type": "link",
           "settings": {
-            "text": "Link 1",
+            "text": "Sneaker",
             "url": "#"
           }
         },
         "link-4": {
           "type": "link",
           "settings": {
-            "text": "Link 1",
+            "text": "Aksesuar",
             "url": "#"
           }
         }

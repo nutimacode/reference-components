@@ -8,7 +8,7 @@
   {%- render 'section-featured-collection', slot: products -%}
 {% endcomment %}
 
-<div class="featured-collection" id="{{ section.id }}">
+<div class="featured-collection" id="{{ section.id }}" data-layout="{{ section.settings.layout }}">
   <div class="featured-collection__title">
     {% render 'section-title' title: section.settings.title, link: section.settings.link, link_text: section.settings.link_text %}
   </div>
@@ -31,7 +31,7 @@
       <div class="button">TEKNOLOJİ</div>
     </div>
   {% endif %}
-  <div class="featured-collection__swiper">
+  <div class="featured-collection__swiper content-wrapper">
     <swiper-container
       navigation="true"
       slides-per-view="4"

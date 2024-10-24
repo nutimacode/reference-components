@@ -6,4 +6,5 @@
   font-weight: var(--font-weight-medium);
   width: 100%;
   justify-content: center;
+  text-transform: uppercase;
 }

@@ -2,6 +2,9 @@
   "sections": {
     "section-featured-collections": {
       "type": "section-featured-collections",
+      "settings": {
+        "layout": "page-width"
+      },
       "blocks": {
         "collection-1": {
           "type": "collection",

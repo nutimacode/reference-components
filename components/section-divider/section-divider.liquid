@@ -12,4 +12,9 @@
   assign spacing = spacing | default: section.settings.spacing | default: 'medium'
 -%}
 
-<div class="divider" data-divider-spacing="{{ spacing }}"></div>
+<div 
+  class="divider"
+  data-divider-spacing="{{ spacing }}"
+  data-layout="{{ section.settings.layout }}"
+  data-border="{{ section.settings.enable_border }}">
+</div>

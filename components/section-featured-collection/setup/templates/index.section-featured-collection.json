@@ -3,6 +3,7 @@
     "section-featured-collection": {
       "type": "section-featured-collection",
       "settings": {
+        "layout": "full-width",
         "collection": "all",
         "title": "All Products",
         "link": "#",

@@ -8,6 +8,22 @@
   "settings": [
     {
       "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Container"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ],
+      "default": "full-width"
+    },
+    {
+      "type": "select",
       "id": "spacing",
       "label": "Spacing",
       "options": [
@@ -29,6 +45,12 @@
         }
       ],
       "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_border",
+      "label": "Enable border",
+      "default": true
     }
   ],
   "presets": [

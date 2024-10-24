@@ -29,6 +29,12 @@
       "default": "full-width"
     },
     {
+      "type": "checkbox",
+      "id": "enable_padding",
+      "label": "Enable padding",
+      "default": false
+    },
+    {
       "type": "header",
       "content": "Header"
     },
@@ -83,6 +89,12 @@
       "id": "scrollbar",
       "label": "Enable scrollbar",
       "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p></p>"
     }
   ],
   "blocks": [
@@ -101,6 +113,10 @@
           "label": "t:labels.media_crop",
           "options": [
             {
+              "value": "original",
+              "label": "Original"
+            },
+            {
               "value": "16-9",
               "label": "16:9"
             },
@@ -117,7 +133,7 @@
               "label": "t:labels.square"
             }
           ],
-          "default": "square"
+          "default": "original"
         }
       ]
     }

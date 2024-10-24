@@ -18,7 +18,7 @@
   assign main_menu = linklists[menu_link_list]
 -%}
 
-<header class="header" data-color-scheme="{{ color_scheme }}"   data-page-width>
+<header class="header" data-color-scheme="{{ color_scheme }}" data-layout="{{ section.settings.layout }}">
   <div class="header__logo">
     <a href="{{ routes.root_url }}">
       {% render 'icon', name: 'mainLogo' %}
@@ -44,7 +44,7 @@
   </div>
 </header>
 
-<section class="horizontal-menu" data-page-width>
+<section class="horizontal-menu" data-layout="{{ section.settings.layout }}">
   <div class="menu-wrapper">
     <ul class="menu">
       {% for link in main_menu.links %}

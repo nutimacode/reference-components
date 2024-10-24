@@ -8,12 +8,12 @@
   {%- render 'section-featured-brands', slot: products -%}
 {% endcomment %}
 
-<div class="featured-brands" id="{{ section.id }}">
+<div class="featured-brands" id="{{ section.id }}" data-layout="{{ section.settings.layout }}">
   <div class="featured-brands__title">
     {% render 'section-title' title: section.settings.title, link: section.settings.link, link_text: section.settings.link_text %}
   </div>
   
-  <div class="featured-brands__swiper">
+  <div class="featured-brands__swiper content-wrapper">
     <swiper-container
       navigation="true"
       slides-per-view="6"

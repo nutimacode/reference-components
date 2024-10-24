@@ -11,6 +11,24 @@
 {% schema %}
 {
   "name": "Link list",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Container"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ],
+      "default": "full-width"
+    }
+  ],
   "blocks": [
     {
       "type": "link",
