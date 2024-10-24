@@ -1,0 +1,32 @@
+{% comment %}
+  collection-card component
+
+  Accepts:
+  - collection {string} - Section content
+  - image {string} - Image
+  - title {string} - Title
+  - with_slide_tag {true|false} - Show slide tag
+
+  Usage:
+  {%- render 'collection-card', section: 0 -%}
+{% endcomment %}
+
+{%- liquid
+  assign collection = collection | default: section.settings.collection | default: "all"
+  assign image = image | default: section.settings.image | default: null
+  assign title = title | default: section.settings.title | default: collections[collection].title |default: "Collection"
+-%}
+
+{% if with_slide_tag %}
+  <swiper-slide>
+{% endif %}
+  <div class="collection-card">
+    <div class="collection-card__image">
+      {% render 'block-image' image: image %}
+    </div>
+    <h4 class="collection-card__title">{{ title }}</h4>
+    <a href="{{ collection.url }}"></a>
+  </div>
+{% if with_slide_tag %}
+  </swiper-slide>
+{% endif %}

@@ -2,22 +2,25 @@
   section-title component
 
   Accepts:
-  - section {string} - Section
+  - title {string} - Title
+  - link {string} - Link
+  - link_text {string} - Link text
 
   Usage:
-  {%- render 'section-title', section: section -%}
+  {%- render 'section-title', title: "Lorem ipsum" -%}
 {% endcomment %}
 
 {%- liquid
-  assign section = section | default: section.settings.section 
-  assign title = section.settings.title | default: collections[section.settings.collection].title | default: "Lorem ipsum"
-  assign link = section.settings.link | default: collections[section.settings.collection].url | default: "#"
-  assign link_text = section.settings.link_text | default: "Tümünü Gör"
+  assign title = title | default: section.settings.title | default: collections[section.settings.collection].title | default: "Lorem ipsum"
+  assign link = link | default: section.settings.link | default: collections[section.settings.collection].url | default: null
+  assign link_text = link_text | default: section.settings.link_text | default: null
 -%}
 
 <div class="section-title">
   <h2>{{ title }}</h2>
-  <div class="section-title__actions">
-    <a href="{{ link }}" class="button">{{ link_text }}</a>
-  </div>
+  {% if link_text and link %}
+    <div class="section-title__actions">
+      <a href="{{ link }}" class="button">{{ link_text }}</a>
+    </div>
+  {% endif %}
 </div>

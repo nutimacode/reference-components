@@ -1,0 +1,79 @@
+{
+  "sections": {
+    "section-featured-collections": {
+      "type": "section-featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        },
+        "collection-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        },
+        "collection-6": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        },
+        "collection-7": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        },
+        "collection-8": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        },
+        "collection-9": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "title": "All Products"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection-4",
+        "collection-5",
+        "collection-6",
+        "collection-7",
+        "collection-8",
+        "collection-9"
+      ]
+    }
+  },
+  "order": [
+    "section-featured-collections"
+  ]
+}

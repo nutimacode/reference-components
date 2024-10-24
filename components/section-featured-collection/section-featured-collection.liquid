@@ -10,8 +10,27 @@
 
 <div class="featured-collection" id="{{ section.id }}">
   <div class="featured-collection__title">
-    {% render 'section-title' %}
+    {% render 'section-title' title: section.settings.title, link: section.settings.link, link_text: section.settings.link_text %}
   </div>
+  {% if section.settings.show_tabs %}
+    <div class="featured-collection__tabs">
+      <div class="button active">TEKNOLOJİ</div>
+      <div class="button">KÜPE</div>
+      <div class="button">ETEK</div>
+      <div class="button">SNEAKER</div>
+      <div class="button">T-SHIRT</div>
+      <div class="button">TERLİK</div>
+      <div class="button">YILBAŞI KOLEKSİYON</div>
+      <div class="button">GÜNEŞ GÖZLÜĞÜ</div>
+      <div class="button">SWEATSHIRT</div>
+      <div class="button">TEKNOLOJİ</div>
+      <div class="button">TEKNOLOJİ</div>
+      <div class="button">TEKNOLOJİ</div>
+      <div class="button">TEKNOLOJİ</div>
+      <div class="button">TEKNOLOJİ</div>
+      <div class="button">TEKNOLOJİ</div>
+    </div>
+  {% endif %}
   <div class="featured-collection__swiper">
     <swiper-container
       navigation="true"

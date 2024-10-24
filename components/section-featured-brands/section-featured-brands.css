@@ -1,0 +1,25 @@
+.featured-brands {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+
+  .featured-brands__swiper {
+    position: relative;
+  }
+
+  .featured-brands__swiper .swiper-prev {
+    left: calc(var(--spacing-7) * -1);
+
+    svg {
+      height: 30px;
+    }
+  }
+
+  .featured-brands__swiper .swiper-next {
+    right: calc(var(--spacing-7) * -1);
+
+    svg {
+      height: 30px;
+    }
+  }
+}

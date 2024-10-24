@@ -1,0 +1,65 @@
+{%- liquid
+  
+  capture blocks
+    for block in section.blocks
+      render 'brand-card', block: block, with_slide_tag: true
+    endfor
+  endcapture
+  
+  render 'section-featured-brands' slot: blocks
+-%}
+
+{% schema %}
+{
+  "name": "Featured brands",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured brands"
+    }
+  ]
+}
+{% endschema %}

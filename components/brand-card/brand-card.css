@@ -1,0 +1,14 @@
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  width: 100%;
+  max-width: var(--size-15);
+  position: relative;
+
+  .brand-card__title {
+    font-size: var(--text-h7);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+  }
+}

@@ -43,3 +43,10 @@
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: var(--color-black);
 }
+
+.slideshow__header {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-6);
+  gap: var(--spacing-6);
+}

@@ -13,6 +13,7 @@ body {
   color: rgb(18 18 18);
   line-height: 1.4; */
   background: white;
+  letter-spacing: -0.04rem;
 }
 
 [hidden] {
@@ -21,4 +22,12 @@ body {
 
 .shopify-section {
   width: 100%;
+}
+
+h2.explorer {
+  padding: 20px;
+}
+
+section.explorer {
+  padding: 0;
 }

@@ -3,7 +3,10 @@
     "section-featured-collection": {
       "type": "section-featured-collection",
       "settings": {
-        "collection": "all"
+        "collection": "all",
+        "title": "All Products",
+        "link": "#",
+        "link_text": "Tümünü Gör"
       }
     }
   },
