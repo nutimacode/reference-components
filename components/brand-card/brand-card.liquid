@@ -1,0 +1,34 @@
+{% comment %}
+  brand-card component
+
+  Accepts:
+  - image {string} - Image
+  - title {string} - Title
+  - url {string} - Url
+  - with_slide_tag {true|false} - Show slide tag
+
+  Usage:
+  {%- render 'brand-card', title: "Lorem" -%}
+{% endcomment %}
+
+{% liquid  
+  assign image = image | default: block.settings.image | default: null
+  assign title = title | default: block.settings.title | default: "Brand"
+  assign url = url | default: block.settings.url | default: null
+%}
+
+{% if with_slide_tag %}
+  <swiper-slide>
+{% endif %}
+  <div class="brand-card">
+    <div class="brand-card__image">
+      {% render 'block-image' image: image %}
+    </div>
+    <h4 class="brand-card__title">{{ title }}</h4>
+    {% if url != blank %}
+      <a href="{{ url }}" class="full-covered" title="{{ title }}"></a>
+    {% endif %}
+  </div>
+{% if with_slide_tag %}
+  </swiper-slide>
+{% endif %}

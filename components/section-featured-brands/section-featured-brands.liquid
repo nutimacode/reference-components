@@ -1,0 +1,40 @@
+{% comment %}
+  section-featured-brands component
+
+  Accepts:
+  - slot {string} - Products to display
+
+  Usage:
+  {%- render 'section-featured-brands', slot: products -%}
+{% endcomment %}
+
+<div class="featured-brands" id="{{ section.id }}">
+  <div class="featured-brands__title">
+    {% render 'section-title' title: section.settings.title, link: section.settings.link, link_text: section.settings.link_text %}
+  </div>
+  
+  <div class="featured-brands__swiper">
+    <swiper-container
+      navigation="true"
+      slides-per-view="6"
+      space-between="20"
+      navigation-prev-el="#{{ section.id }} .swiper-prev"
+      navigation-next-el="#{{ section.id }} .swiper-next"
+    >
+      {{ slot }}
+    </swiper-container>
+    
+    <div class="featured-brands__navigation swiper-navigation">
+      <button class="swiper-prev">
+        {% render 'icon' name: "arrow-left", hydration: "on:idle" %}
+      </button>
+      <button class="swiper-next">
+        {% render 'icon' name: "arrow-right", hydration: "on:idle" %}
+      </button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  import "components/section-featured-brands";
+</script>

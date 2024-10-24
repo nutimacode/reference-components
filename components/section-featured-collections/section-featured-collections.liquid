@@ -1,0 +1,44 @@
+{% comment %}
+  section-featured-collections component
+
+  Accepts:
+  - slot {string} - Slot content
+
+  Usage:
+  {%- render 'section-featured-collections', slot: collection_list -%}
+{% endcomment %}
+
+
+<div class="featured-collections" id="{{ section.id }}">
+  <div class="featured-collections__title">
+    {% render 'section-title' title: section.settings.title, link: section.settings.link, link_text: section.settings.link_text %}
+  </div>
+  <div class="featured-collections__swiper">
+    <swiper-container
+      navigation="true"
+      slides-per-view="4.5"
+      space-between="20"
+      navigation-prev-el="#{{ section.id }} .swiper-prev"
+      navigation-next-el="#{{ section.id }} .swiper-next"
+      loop
+      free-mode
+      slides-offset-before="20"
+    >
+      {{ slot }}
+    </swiper-container>
+    
+    <div class="featured-collections__navigation swiper-navigation">
+      <button class="swiper-prev">
+        {% render 'icon' name: "arrow-left", hydration: "on:idle" %}
+      </button>
+      <button class="swiper-next">
+        {% render 'icon' name: "arrow-right", hydration: "on:idle" %}
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<script type="module">
+  import "components/section-featured-collections"
+</script>

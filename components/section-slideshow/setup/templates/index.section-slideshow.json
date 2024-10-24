@@ -3,7 +3,9 @@
     "section-slideshow": {
       "type": "section-slideshow",
       "settings": {
-        "layout": "page-width"
+        "layout": "page-width",
+        "title": "shopi go",
+        "color_scheme": "scheme-2",
       },
       "blocks": {
         "slide-1": {

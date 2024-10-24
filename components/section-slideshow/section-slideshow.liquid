@@ -19,6 +19,16 @@
   id="{{ section.id }}"
   data-layout="{{ section.settings.layout }}"
 >
+  {% if section.settings.header_image != blank or section.settings.title != blank %}
+    <div class="slideshow__header" data-color-scheme='{{ section.settings.color_scheme }}'>
+      {% if section.settings.header_image != blank %}
+        {% render 'block-image' image: section.settings.header_image %}
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+    </div>
+  {% endif %}
   <div class="slideshow__swiper">
     <swiper-container
       navigation="{{ section.settings.navigation }}"
