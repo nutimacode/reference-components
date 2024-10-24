@@ -10,7 +10,7 @@
 
 {% liquid
   assign image = image | default: block.settings.image
-  assign media_crop = media_crop | default: block.settings.media_crop | default: 'square'
+  assign media_crop = media_crop | default: block.settings.media_crop | default: 'original'
   assign preload = preload | default: false
   assign sizes = sizes | default: '100vw'
 

@@ -17,3 +17,11 @@
 .aspect-ratio--square {
   aspect-ratio: 1 / 1;
 }
+
+.aspect-ratio--original {
+  aspect-ratio: 0;
+
+  svg {
+    position: relative;
+  }
+}

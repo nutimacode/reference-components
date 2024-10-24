@@ -1,0 +1,7 @@
+.link-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: auto;
+  gap: var(--spacing-6);
+}

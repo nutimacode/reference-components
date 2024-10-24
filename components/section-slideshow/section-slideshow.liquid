@@ -2,18 +2,46 @@
   section-slideshow component
 
   Accepts:
-  - text {sring} - Text to display
+  - slot {sring} - Slides slot
 
   Usage:
-  {%- render 'section-slideshow', param1: 0 -%}
+  {%- render 'section-slideshow', slot: blocks -%}
 {% endcomment %}
 
-{%- liquid
-  assign text = text | default: section.settings.text | default: "Lorem ipsum"
--%}
+{% liquid
+  assign navigation = navigation | default: section.settings.navigation | default: true
+  assign pagination = pagination | default: section.settings.pagination | default: true
+  assign scrollbar = scrollbar | default: section.settings.scrollbar | default: false
+%}
 
-<h1>{{ text }}</h1>
+<div 
+  class="slideshow"
+  id="{{ section.id }}"
+  data-layout="{{ section.settings.layout }}"
+>
+  <div class="slideshow__swiper">
+    <swiper-container
+      navigation="{{ section.settings.navigation }}"
+      pagination="{{ section.settings.pagination }}"
+      scrollbar="{{ section.settings.scrollbar }}"
+      pagination-clickable="true"
+      navigation-prev-el="#{{ section.id }} .swiper-prev"
+      navigation-next-el="#{{ section.id }} .swiper-next"
+      pagination-el="#{{ section.id }} .swiper-pagination"
+    >
+      {{ slot }}
+    </swiper-container>
+    
+    <button class="slideshow__swiper-prev swiper-prev">
+      {% render 'icon' name: "arrow-left", eager: true %}
+    </button>
+    <button class="slideshow__swiper-next swiper-next">
+      {% render 'icon' name: "arrow-right", eager: true %}
+    </button>
 
+    <div class="slideshow__pagination swiper-pagination"></div>
+  </div>
+</div>
 
 <script type="module">
   import "components/section-slideshow";

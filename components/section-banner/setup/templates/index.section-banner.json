@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "section-banner": {
+      "type": "section-banner",
+      "settings": {
+        "layout": "full-width"
+      }
+    }
+  },
+  "order": [
+    "section-banner"
+  ]
+}

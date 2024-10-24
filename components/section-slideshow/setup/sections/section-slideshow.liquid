@@ -1,16 +1,97 @@
-{%- liquid
-  render 'section-slideshow'
--%}
+{% liquid
+  capture block
+    for block in section.blocks
+      render 'slideshow-slide', block: block
+    endfor
+  endcapture
+
+  render 'section-slideshow', slot: block
+%}
 
 {% schema %}
 {
   "name": "Slideshow",
   "settings": [
     {
-      "type": "text",
-      "id": "text",
-      "label": "Text",
-      "default": "TEXT"
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Container"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ],
+      "default": "full-width"
+    },
+    {
+      "type": "checkbox",
+      "id": "navigation",
+      "label": "Enable navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "pagination",
+      "label": "Enable pagination",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "scrollbar",
+      "label": "Enable scrollbar",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "media_crop",
+          "label": "t:labels.media_crop",
+          "options": [
+            {
+              "value": "16-9",
+              "label": "16:9"
+            },
+            {
+              "value": "portrait",
+              "label": "t:labels.portrait"
+            },
+            {
+              "value": "landscape",
+              "label": "t:labels.landscape"
+            },
+            {
+              "value": "square",
+              "label": "t:labels.square"
+            }
+          ],
+          "default": "square"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
     }
   ]
 }

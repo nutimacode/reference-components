@@ -1,5 +1,6 @@
 .page-width,
-[data-page-width] {
+[data-page-width],
+[data-layout='page-width'] {
   padding-inline: var(--page-width-padding);
   max-width: var(--page-width);
   margin: 0 auto;

@@ -1,0 +1,15 @@
+{% comment %}
+  section-divider component
+
+  Accepts:
+  - spacing {'none'|'small'|'medium'|'large'} - Spacing between sections
+
+  Usage:
+  {%- render 'section-divider', spacing: 40 -%}
+{% endcomment %}
+
+{%- liquid
+  assign spacing = spacing | default: section.settings.spacing | default: 'medium'
+-%}
+
+<div class="divider" data-divider-spacing="{{ spacing }}"></div>

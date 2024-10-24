@@ -139,6 +139,7 @@ h6 {
   font-style: var(--heading-font-style);
 }
 
+h1,
 .h1,
 .rte :where(h1) {
   font-size: var(--size-10);
@@ -149,16 +150,18 @@ h6 {
   }
 }
 
+h2,
 .h2,
 .rte :where(h2) {
   font-size: var(--size-9);
   line-height: 1.1;
+  font-weight: var(--font-weight-light);
 
   @media (--medium-up) {
     font-size: var(--text-h2);
   }
 }
-
+h3,
 .h3,
 .rte :where(h3) {
   font-size: var(--size-8);
@@ -169,6 +172,7 @@ h6 {
   }
 }
 
+h4,
 .h4,
 .rte :where(h4) {
   font-size: var(--size-7);
@@ -179,6 +183,7 @@ h6 {
   }
 }
 
+h5,
 .h5,
 .rte :where(h5) {
   font-size: var(--size-8);
@@ -189,6 +194,7 @@ h6 {
   }
 }
 
+h6,
 .h6,
 .rte :where(h6) {
   font-size: var(--size-7);
@@ -235,7 +241,7 @@ h6 {
   }
 }
 
-.h11{
+.h11 {
   font-size: var(--size-7);
   line-height: 1.4;
 
@@ -244,7 +250,7 @@ h6 {
   }
 }
 
-.h12{
+.h12 {
   font-size: var(--size-7);
   line-height: 1.4;
 

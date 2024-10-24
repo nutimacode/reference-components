@@ -1,0 +1,23 @@
+{% comment %}
+  section-title component
+
+  Accepts:
+  - section {string} - Section
+
+  Usage:
+  {%- render 'section-title', section: section -%}
+{% endcomment %}
+
+{%- liquid
+  assign section = section | default: section.settings.section 
+  assign title = section.settings.title | default: collections[section.settings.collection].title | default: "Lorem ipsum"
+  assign link = section.settings.link | default: collections[section.settings.collection].url | default: "#"
+  assign link_text = section.settings.link_text | default: "Tümünü Gör"
+-%}
+
+<div class="section-title">
+  <h2>{{ title }}</h2>
+  <div class="section-title__actions">
+    <a href="{{ link }}" class="button">{{ link_text }}</a>
+  </div>
+</div>

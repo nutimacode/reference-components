@@ -1,2 +1,45 @@
-/* Stylesheet entrypoint for the section-slideshow component. This file
-and all its imports will be processed through PostCSS */
+.slideshow__swiper {
+  position: relative;
+}
+.swiper-prev,
+.swiper-next {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-65%);
+  z-index: 2;
+  cursor: pointer;
+}
+.swiper-prev {
+  left: var(--spacing-6);
+}
+
+.swiper-next {
+  right: var(--spacing-6);
+}
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: var(--spacing-6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color-white);
+  width: var(--size-1);
+  height: var(--size-1);
+  margin: 0 var(--spacing-1);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--color-black);
+}
