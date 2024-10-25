@@ -1,0 +1,161 @@
+{% comment %}
+  section-slider-list component
+
+  Accepts:
+  - param1 {number} - Number to ouptput
+
+  Usage:
+  {%- render 'section-slider-list', param1: 0 -%}
+{% endcomment %}
+
+
+<div class="slider-list content-wrapper">
+  <div class="slider-list__slider card-effect" id="slider-3">
+    <h2 class="slider-list__title">#Shopfam</h2>
+    <div class="slider-list__slider-container">
+      <swiper-container
+        pagination
+        navigation-prev-el="#slider-3 .swiper-prev"
+        navigation-next-el="#slider-3 .swiper-next"
+        pagination-el="#slider-3 .swiper-pagination"
+        effect="cards"
+        loop
+        initial-slide="1"
+      >
+        <swiper-slide>
+          <div class="slider-list__item">
+            <div class="slider-list__media">
+              <img src="https://images.unsplash.com/photo-1728607424990-40df61d7ba84?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slider-list__item">
+            <div class="slider-list__media">
+              <img src="https://images.unsplash.com/photo-1729731321983-fc2023771966?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slider-list__item">
+            <div class="slider-list__media">
+              <img src="https://images.unsplash.com/photo-1728607424990-40df61d7ba84?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+
+      <div class="slider-list__navigation swiper-navigation">
+        <button class="swiper-prev">
+          {% render 'icon' name: "arrow-left", hydration: "on:idle" %}
+        </button>
+        <button class="swiper-next">
+          {% render 'icon' name: "arrow-right", hydration: "on:idle" %}
+        </button>
+      </div>
+      {% comment %} <div class="slideshow__pagination swiper-pagination"></div> {% endcomment %}
+    </div>
+
+    <a href="#">SHOPI GO PRIVATE LABEL COLLECTION SS’24</a>
+  </div>
+  <div class="slider-list__slider" id="slider-1">
+    <h2 class="slider-list__title">Events</h2>
+    <div class="slider-list__slider-container">
+      <swiper-container
+        pagination
+        navigation-prev-el="#slider-1 .swiper-prev"
+        navigation-next-el="#slider-1 .swiper-next"
+        pagination-el="#slider-1 .swiper-pagination"
+        initialSlide="1"
+      >
+        <swiper-slide>
+          <div class="slider-list__item">
+            <div class="slider-list__media">
+              <img src="https://images.unsplash.com/photo-1729731321983-fc2023771966?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div class="slider-list__text">
+              <h5>SALOMON x SHOPI GO x WUNDER</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#">DEVAMINI OKU</a>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slider-list__item">
+            <div class="slider-list__media">
+              <img src="https://images.unsplash.com/photo-1729731321983-fc2023771966?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div class="slider-list__text">
+              <h5>SALOMON x SHOPI GO x WUNDER</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#">DEVAMINI OKU</a>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+
+      <div class="slider-list__navigation swiper-navigation">
+        <button class="swiper-prev">
+          {% render 'icon' name: "arrow-left", hydration: "on:idle" %}
+        </button>
+        <button class="swiper-next">
+          {% render 'icon' name: "arrow-right", hydration: "on:idle" %}
+        </button>
+      </div>
+
+      {% comment %} <div class="slideshow__pagination swiper-pagination"></div> {% endcomment %}
+    </div>
+  </div>
+  <div class="slider-list__slider" id="slider-2">
+    <h2 class="slider-list__title">Stories</h2>
+    <div class="slider-list__slider-container">
+      <swiper-container
+        pagination
+        navigation-prev-el="#slider-2 .swiper-prev"
+        navigation-next-el="#slider-2 .swiper-next"
+        pagination-el="#slider-2 .swiper-pagination"
+      >
+        <swiper-slide>
+          <div class="slider-list__item">
+            <div class="slider-list__media">
+              <img src="https://images.unsplash.com/photo-1729731321983-fc2023771966?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div class="slider-list__text">
+              <h5>SALOMON x SHOPI GO x WUNDER</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#">DEVAMINI OKU</a>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slider-list__item">
+            <div class="slider-list__media">
+              <img src="https://images.unsplash.com/photo-1729731321983-fc2023771966?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div class="slider-list__text">
+              <h5>SALOMON x SHOPI GO x WUNDER</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+              <a href="#">DEVAMINI OKU</a>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+
+      <div class="slider-list__navigation swiper-navigation">
+        <button class="swiper-prev">
+          {% render 'icon' name: "arrow-left", hydration: "on:idle" %}
+        </button>
+        <button class="swiper-next">
+          {% render 'icon' name: "arrow-right", hydration: "on:idle" %}
+        </button>
+      </div>
+
+      {% comment %} <div class="slideshow__pagination swiper-pagination"></div> {% endcomment %}
+    </div>
+  </div>
+</div>
+
+
+<script type="module">
+  import "components/section-slider-list"
+</script>

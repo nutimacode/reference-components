@@ -1,0 +1,64 @@
+{% comment %}
+  section-main-collection component
+
+  Accepts:
+  - param1 {number} - Number to ouptput
+
+  Usage:
+  {%- render 'section-main-collection', param1: 0 -%}
+{% endcomment %}
+
+{%- liquid
+  assign param1 = param1 | default: section.settings.param1 | default: 1
+-%}
+
+<section class="main-collection">
+  <div class="main-collection__banner">
+    <div class="block-image aspect-ratio--4-1">
+      <img src="https://cdn.shopify.com/s/files/1/0668/9597/0467/files/8061292d3654bb419db6ba276fd498fd.png?v=1729772832" alt="">
+    </div>
+  </div>
+  <div class="main-collection__description content-wrapper">
+    <p>shopi go Private Label Koleksiyonu, markanın DNA’sında yer alan her ayrıntıyı bünyesinde taşıyor. Eforsuz iyi görünmek, kendi teninde iyi hissetmek ve bu histen doğan seksi ışıltıyı istemsizce yaymak koleksiyonun her parçasının üstlendiği temel bir görev. Oversize kesimler, akıcı ve doğal kumaşlar, pastel ve canlı renklerin hakimiyetinde; 90’ların ruhunu günümüze şık bir rahatlıkla taşıyor. Giyimi kendini ifade etme biçimi olarak benimseyen herkes için güçlü ve cüretkar tasarımları cinsiyetsiz kalıplarla sunuyor.</p>
+  </div>
+
+  <div class="main-collection__filter content-wrapper">
+    <div class="main-collection__filter-title">
+      <button class="main-collection__filter-button">
+        <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.5 22.3001H24.9459M0.5 13.332H24.9459" stroke="black"/>
+          <path d="M8.52884 25.6636C10.3699 25.6636 11.8624 24.1579 11.8624 22.3005C11.8624 20.4432 10.3699 18.9375 8.52884 18.9375C6.68778 18.9375 5.19531 20.4432 5.19531 22.3005C5.19531 24.1579 6.68778 25.6636 8.52884 25.6636Z" fill="white" stroke="black"/>
+          <path d="M0.5 4.36328H24.9459" stroke="black"/>
+          <path d="M15.1929 7.72608C17.034 7.72608 18.5264 6.2204 18.5264 4.36304C18.5264 2.50568 17.034 1 15.1929 1C13.3518 1 11.8594 2.50568 11.8594 4.36304C11.8594 6.2204 13.3518 7.72608 15.1929 7.72608Z" fill="white" stroke="black"/>
+        </svg>
+        <span>Filtrele</span>
+        <span>(4783 Ürün)</span>
+      </button>
+      <span class="main-collection__divider"></span>
+      <h3>{{ collection.title }}</h3>
+      <span class="main-collection__divider"></span>
+      <span class="main-collection__fav-info">20 Ürün Favori Olarak Eklendi</span>
+    </div>
+    <div class="main-collectio__sort">
+      <a href="#">
+        <span>SIRALA</span>
+        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.40625 6.445L3.96025 11.25L0.51425 6.445M3.96025 10.75L3.96025 0.75" stroke="black"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="main-collection__products">
+    {% for product in collection.products %}
+      {% render 'product-card' product: product %}
+      {% assign modulo = forloop.index | modulo: 8 %}
+      {% if modulo == 0  %}
+        <div class="main-collection__product-banner">
+          <div class="block-image aspect-ratio--4-1">
+            <img src="https://cdn.shopify.com/s/files/1/0668/9597/0467/files/8061292d3654bb419db6ba276fd498fd.png?v=1729772832" alt="">
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

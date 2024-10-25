@@ -62,3 +62,7 @@
   font-size: var(--text-h7);
   font-weight: var(--font-weight-light);
 }
+
+[data-padding='true'] .slideshow__header {
+  padding: var(--spacing-6) 0;
+}

@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-instagram": {
+      "type": "section-instagram"
+    }
+  },
+  "order": [
+    "section-instagram"
+  ]
+}

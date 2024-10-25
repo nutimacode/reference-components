@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-rich-text": {
+      "type": "section-rich-text"
+    }
+  },
+  "order": [
+    "section-rich-text"
+  ]
+}

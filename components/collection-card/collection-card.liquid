@@ -8,13 +8,13 @@
   - with_slide_tag {true|false} - Show slide tag
 
   Usage:
-  {%- render 'collection-card', section: 0 -%}
+  {%- render 'collection-card', block: block -%}
 {% endcomment %}
 
 {%- liquid
-  assign collection = collection | default: section.settings.collection | default: "all"
-  assign image = image | default: section.settings.image | default: null
-  assign title = title | default: section.settings.title | default: collections[collection].title |default: "Collection"
+  assign collection = collection | default: block.settings.collection | default: "all"
+  assign image = image | default: block.settings.image | default: collections[collection].featured_image | default: null
+  assign title = title | default: block.settings.title | default: collections[collection].title |default: "Collection"
 -%}
 
 {% if with_slide_tag %}

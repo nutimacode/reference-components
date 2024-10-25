@@ -20,6 +20,10 @@ body {
   display: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .shopify-section {
   width: 100%;
 }
