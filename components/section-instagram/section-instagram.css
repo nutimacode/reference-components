@@ -1,0 +1,21 @@
+.instagram {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  justify-content: center;
+  align-items: center;
+
+  .instagram__list {
+    display: flex;
+    gap: var(--spacing-6);
+
+    a {
+      display: inline-block;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

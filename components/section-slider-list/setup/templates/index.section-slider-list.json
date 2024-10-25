@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "section-slider-list": {
+      "type": "section-slider-list"
+    }
+  },
+  "order": [
+    "section-slider-list"
+  ]
+}

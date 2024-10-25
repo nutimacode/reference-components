@@ -112,7 +112,6 @@
 .icon--fav path {
   fill: transparent;
   stroke: currentColor;
-
 }
 .icon--fav:hover path {
   fill: #808080;
@@ -125,19 +124,19 @@
 }
 
 .horizontal-menu {
-	padding: 10px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
   height: 42px;
 }
 
 .horizontal-menu .menu {
-	display: flex;
-	list-style: none;
-	gap: 50px;
-	padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  padding: 0;
   @media (--small) {
     display: none;
   }
@@ -151,57 +150,52 @@
 }
 
 .horizontal-menu .menu-item {
-	font-size: var(--font-size-h10);
+  font-size: var(--text-h10);
 }
 .horizontal-menu .menu-item a {
-	text-decoration: none;
-	color: var(--color-black);
+  text-decoration: none;
+  color: var(--color-black);
 }
 
 .horizontal-menu .menu-item a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .menu-left {
-	display: flex;
-	align-items: center;
-	gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
   @media (--small) {
     display: none;
   }
 }
 
-.menu-left a{
+.menu-left a {
   text-decoration: none;
   color: var(--color-black);
 }
 
-.icon--leftLogo{
-	width: 39px;
-	height: 14px;
+.icon--leftLogo {
+  width: 39px;
+  height: 14px;
 }
 
-.icon--mainLogo{
+.icon--account {
   stroke: currentColor;
   color: currentColor;
 }
 
-.icon--account{
+.icon--account path {
   stroke: currentColor;
   color: currentColor;
 }
 
-.icon--account path{
+.icon--basket {
   stroke: currentColor;
   color: currentColor;
 }
 
-.icon--basket{
-  stroke: currentColor;
-  color: currentColor;
-}
-
-.icon--basket path{
+.icon--basket path {
   fill: transparent;
   stroke: currentColor;
 }

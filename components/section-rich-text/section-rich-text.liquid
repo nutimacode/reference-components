@@ -1,0 +1,14 @@
+{% comment %}
+  section-rich-text component
+
+  Accepts:
+  - param1 {number} - Number to ouptput
+
+  Usage:
+  {%- render 'section-rich-text', param1: 0 -%}
+{% endcomment %}
+
+<div class="rich-text content-wrapper">
+  {% capture text %}SHOPI GO, 2012 YILINDA TÜRKIYE’NİN İLK VE TEK ONLINE VE OFFLINE KONSEPT MAĞAZASI OLARAK KURULDUĞUNDAN BERİ, YENİ ŞEYLER KEŞFETMEK İSTEYEN MODA, SANAT, TEKNOLOJİ VE TASARIM SEVERLER İÇİN İDEAL BİR PLATFORM OLMAYI HEDEFLİYOR. BU HEDEF DOĞRULTUSUNDA DÜNYACA ÜNLÜ MARKALAR, ÇAĞDAŞ TASARIMLAR, SES GETİREN İŞBİRLİKTELİKLERİ, LÜKS SOKAK GİYİM MARKALARI VE ÖZEL SNEAKER KOLEKSİYONLARININ YANI SIRA TEKNOLOJİ, EV VE KİŞİSEL BAKIMDAN ÖZEL KİTAP SEÇKİSİNE YAŞAMIN HER ALANINA EŞLİK EDEN ZENGİN BİR ÜRÜN ÇEŞİTLİLİĞİ SUNUYOR.{% endcapture %}
+  {% render 'block-rich-text' text: text %}
+</div>
